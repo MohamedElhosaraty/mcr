@@ -6,8 +6,8 @@ import 'package:mcr/mcr.dart';
 import 'core/di/dependency_injection.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/observer/bloc_observer.dart';
-import 'feature/home/models/note_model.dart';
-import 'feature/home/ui/constant.dart';
+import 'core/constant/constant.dart';
+import 'feature/note/models/note_model.dart';
 
 void main() async {
   await Hive.initFlutter();

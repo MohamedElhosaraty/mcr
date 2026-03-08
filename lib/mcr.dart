@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/localization/set_localization.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
-import 'feature/home/cubits/notes_cubit/notes_cubit.dart';
+import 'feature/note/cubits/notes_cubit/notes_cubit.dart';
 
 class Mcr extends StatelessWidget {
   const Mcr({super.key});
