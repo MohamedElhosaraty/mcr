@@ -69,7 +69,7 @@ class LocalNotificationService {
     int totalNotifications = (24 ~/ hoursInterval) * durationDays;
 
     for (int i = 1; i <= totalNotifications; i++) {
-      scheduledTime = scheduledTime.add(Duration(seconds: hoursInterval));
+      scheduledTime = scheduledTime.add(Duration(hours: hoursInterval));
       int notificationId = medicineName.hashCode + i;
       await flutterLocalNotificationsPlugin.zonedSchedule(
         notificationId,
