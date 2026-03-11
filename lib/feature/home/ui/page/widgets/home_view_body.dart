@@ -23,7 +23,9 @@ class HomeViewBody extends StatelessWidget {
           text: tr(context, "memory"),),
           30.verticalSpace,
           CustomButton(
-            onPressed: (){},text: tr(context, "alarm"),),
+            onPressed: (){
+              Navigator.pushNamed(context, Routes.alarmView);
+            },text: tr(context, "alarm"),),
           30.verticalSpace,
           CustomButton(onPressed: (){},text: tr(context, "chat"),),
           ]
