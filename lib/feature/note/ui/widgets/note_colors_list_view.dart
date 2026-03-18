@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../feature/note/cubits/add_note_cubit/add_note_cubit.dart';
-import 'color_item.dart';
+import '../../cubits/add_note_cubit/add_note_cubit.dart';
+import '../../../../core/widgets/color_item.dart';
 
-class ColorsListView extends StatefulWidget {
-  const ColorsListView({super.key});
+class NoteColorsListView extends StatefulWidget {
+  const NoteColorsListView({super.key});
 
   @override
-  State<ColorsListView> createState() => _ColorsListViewState();
+  State<NoteColorsListView> createState() => _NoteColorsListViewState();
 }
 
-class _ColorsListViewState extends State<ColorsListView> {
+class _NoteColorsListViewState extends State<NoteColorsListView> {
   int currentIndex = 0;
   List<Color> colors =
       const [

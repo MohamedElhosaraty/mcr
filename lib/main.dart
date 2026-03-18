@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:mcr/feature/alarm/models/alarm_model.dart';
 import 'package:mcr/mcr.dart';
 import 'core/di/dependency_injection.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/observer/bloc_observer.dart';
 import 'core/constant/constant.dart';
+import 'feature/alarm/service/local_notification_service.dart';
 import 'feature/note/models/note_model.dart';
 
 void main() async {
   await Hive.initFlutter();
   WidgetsFlutterBinding.ensureInitialized();
   Hive.registerAdapter(NoteModelAdapter());
+  Hive.registerAdapter(AlarmModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
+  await Hive.openBox<AlarmModel>(kAlarmBox);
+  await LocalNotificationService.init();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,

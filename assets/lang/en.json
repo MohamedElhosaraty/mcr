@@ -7,7 +7,13 @@
   "alarm": "Alarm",
   "chat": "chat",
   "title": "Title",
-  "content": "Content"
-
+  "content": "Content",
+  "all": "All",
+  "hour": "hour",
+  "addAlarm": "Add Alarm",
+  "treatment": "Treatment",
+  "timeToTakeYourMedicine": "Time to take your medicine",
+  "addDays": "Add Days",
+  "theMedicationExpiresOn": "The medication expires on"
 
 }

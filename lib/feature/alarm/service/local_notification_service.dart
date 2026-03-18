@@ -30,7 +30,7 @@ class LocalNotificationService {
     // تهيئة timezone
     tz.initializeTimeZones();
 
-    String timeZoneName = 'Africa/Cairo'; // fallback
+    String timeZoneName = 'Africa/Cairo';
 
     try {
       timeZoneName = await tz.local.name;
@@ -41,10 +41,7 @@ class LocalNotificationService {
     tz.setLocalLocation(tz.getLocation(timeZoneName));
     log('TimeZone set to: $timeZoneName');
   }
-
-  /// جدولة إشعارات الأدوية
-  /// [hoursInterval] كل كم ساعة
-  /// [durationDays] مدة العلاج بالأيام
+  
   static Future<void> scheduleMedicineNotifications({
     required String medicineName,
     required int hoursInterval,

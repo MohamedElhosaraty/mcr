@@ -3,6 +3,8 @@ class Assets {
   Assets._();
 
   static const String imagesLogo = 'assets/images/logo.jpg';
+  static const String imagesLogoAndroid12 = 'assets/images/logo_android12.png';
+  static const String imagesLogoIcon = 'assets/images/logo_icon.png';
   static const String langAr = 'assets/lang/ar.json';
   static const String langEn = 'assets/lang/en.json';
 

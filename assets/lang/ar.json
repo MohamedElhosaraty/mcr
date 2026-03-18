@@ -7,5 +7,12 @@
   "alarm": "المنبه",
   "chat": "الدردشه",
   "title": "العنوان",
-  "content": "المحتوى"
+  "content": "المحتوى",
+  "all": "كل",
+  "hour": "ساعه",
+  "addAlarm": "اضف منبه",
+  "treatment": "العلاج",
+  "timeToTakeYourMedicine": "حان وقت تناول دوائك ",
+  "addDays":  "اضف ايام",
+  "theMedicationExpiresOn": "ينتهى الدواء يوم "
 }

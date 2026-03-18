@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mcr/feature/alarm/cubit/alarm_cubit.dart';
 
 import 'core/localization/set_localization.dart';
 import 'core/routing/app_router.dart';
@@ -17,14 +18,25 @@ class Mcr extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: BlocProvider(
-        create: (context) =>
-        NotesCubit()
-          ..fetchAllNotes(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) =>
+            NotesCubit()
+              ..fetchAllNotes(),
+          ),
+          BlocProvider(
+            create: (context) =>
+            AlarmCubit()
+              ..fetchAllAlarms(),
+          ),
+        ],
         child: BlocBuilder<NotesCubit, NotesState>(
           builder: (context, state) {
             return MaterialApp(
-              locale: NotesCubit.get(context).language,
+              locale: NotesCubit
+                  .get(context)
+                  .language,
               supportedLocales: const [
                 Locale('en', 'US'),
                 Locale('ar', 'EG'),
